@@ -36,7 +36,7 @@ spec:
   route:
     groupInterval: 1m
     groupWait: 10s
-    repeatInterval: 15m
+    repeatInterval: 1m
     receiver: "team-navno-default-alerts"
     routes:
       - receiver: "team-navno-frontend-alerts"
