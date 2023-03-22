@@ -5,6 +5,7 @@ metadata:
   namespace: personbruker
   labels:
     alertmanagerConfig: team-navno-alerts
+    team: personbruker
 spec:
   receivers:
     - name: team-navno-default-alerts
