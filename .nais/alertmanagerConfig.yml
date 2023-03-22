@@ -15,7 +15,7 @@ spec:
             name: slack-webhook
           channel: '#team-navno-frontend-alerts'
           iconEmoji: ':meow_oopskeyboard:'
-          username: 'Testing Alert frontend'
+          username: 'Testing alert frontend'
           sendResolved: true
           title: |-
             [{{ .Status | toUpper }}{{ if eq .Status "firing" }}:{{ .Alerts.Firing | len }}{{ end }}] {{ .CommonLabels.alertname }}
