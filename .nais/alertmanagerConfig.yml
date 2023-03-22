@@ -7,6 +7,7 @@ metadata:
     alertmanagerConfig: team-navno-alerts
 spec:
   receivers:
+    - name: team-navno-default-alerts
     - name: team-navno-frontend-alerts
       slackConfigs:
         - apiURL:
@@ -93,6 +94,7 @@ spec:
     groupInterval: 10s
     groupWait: 5s
     repeatInterval: 15m
+    receiver: "team-navno-default-alerts"
     routes:
       - receiver: "team-navno-frontend-alerts"
         matchers:
