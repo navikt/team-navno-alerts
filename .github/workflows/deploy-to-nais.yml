@@ -1,5 +1,6 @@
 name: Deploy alerts
 on:
+  workflow_dispatch:
   push:
     branches:
       - master
@@ -18,4 +19,4 @@ jobs:
         env:
           CLUSTER: prod-gcp
           APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
-          RESOURCE: .nais/alerts.yml
+          RESOURCE: .nais/alertmanagerConfig.yml
