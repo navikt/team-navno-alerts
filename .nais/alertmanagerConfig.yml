@@ -16,7 +16,7 @@ spec:
             name: slack-webhook
           channel: '#team-navno-frontend-alerts'
           iconEmoji: ':meow_oopskeyboard:'
-          username: 'Testing alert frontend'
+          username: 'Alerts frontend'
           sendResolved: true
           title: '{{ template "slack.title" . }}'
           text: '{{ template "slack.text" . }}'
@@ -28,7 +28,7 @@ spec:
             name: slack-webhook
           channel: '#team-navno-backend-alerts'
           iconEmoji: ':meow_oopskeyboard:'
-          username: 'Testing Alert backend'
+          username: 'Alerts backend'
           sendResolved: true
           title: '{{ template "slack.title" . }}'
           text: '{{ template "slack.text" . }}'
