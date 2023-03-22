@@ -1,4 +1,4 @@
-name: Deploy alerts
+name: Deploy alertmanager config
 on:
   workflow_dispatch:
   push:
