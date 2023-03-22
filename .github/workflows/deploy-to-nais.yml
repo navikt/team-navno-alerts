@@ -1,0 +1,21 @@
+name: Deploy alerts
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - .nais/alertmanagerConfig.yml
+
+jobs:
+  deploy_alerts:
+    name: Deploy alertmanager config
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+      - name: Deploy to nais
+        uses: nais/deploy/actions/deploy@v1
+        env:
+          CLUSTER: prod-gcp
+          APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
+          RESOURCE: .nais/alerts.yml
